@@ -1,14 +1,20 @@
 import './styles.css';
 import { ToDo,TodoList } from './classes'; 
+import { CreateTodoHtml } from './js/componentes';
 
 
 
 
-const todoList = new TodoList();
-const tarea = new ToDo('Aprender JS');
-const tarea2 = new ToDo('Aprender React');
 
+export const todoList = new TodoList();
+
+const tarea = new ToDo('Aprender Javascript');
 todoList.newTodo(tarea);
-todoList.newTodo(tarea2);
+
+
+tarea.completado = true;
+
 
 console.log(todoList)
+
+CreateTodoHtml(tarea);
