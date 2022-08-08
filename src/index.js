@@ -1,20 +1,11 @@
 import './styles.css';
-import { ToDo,TodoList } from './classes'; 
+
+import { TodoList } from './classes'; 
 import { CreateTodoHtml } from './js/componentes';
-
-
-
 
 
 export const todoList = new TodoList();
 
-const tarea = new ToDo('Aprender Javascript');
-todoList.newTodo(tarea);
+todoList.todos.forEach(todo => CreateTodoHtml(todo)); 
 
-
-tarea.completado = true;
-
-
-console.log(todoList)
-
-CreateTodoHtml(tarea);
+// para c/toDo en el arreglo de todos, voy a ejecutar la funcion CrearTodoHtml mandandole ese todo 
