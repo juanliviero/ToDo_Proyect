@@ -1,14 +1,11 @@
 import './styles.css';
-import { ToDo,TodoList } from './classes'; 
+
+import { TodoList } from './classes'; 
+import { CreateTodoHtml } from './js/componentes';
 
 
+export const todoList = new TodoList();
 
+todoList.todos.forEach(todo => CreateTodoHtml(todo)); 
 
-const todoList = new TodoList();
-const tarea = new ToDo('Aprender JS');
-const tarea2 = new ToDo('Aprender React');
-
-todoList.newTodo(tarea);
-todoList.newTodo(tarea2);
-
-console.log(todoList)
+// para c/toDo en el arreglo de todos, voy a ejecutar la funcion CrearTodoHtml mandandole ese todo 
